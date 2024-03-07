@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 build job: 'PES1UG21CS526-1'
-                sh 'g++ Jenkins_lab-main/main/nonexist.cpp -o Jenkins_lab-main/main/output'
+                sh 'g++ Jenkins_lab-main/main/main.cpp -o Jenkins_lab-main/main/output'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
 
     post {
         failure {
-            echo 'Pipeline failed'
+            error 'Pipeline failed'
         }
     }
 }
