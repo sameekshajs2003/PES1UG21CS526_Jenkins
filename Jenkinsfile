@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 build job: 'PES1UG21CS526-1'
-                sh 'g++ Jenkins_lab-main/main/main.cpp -o output'
+                sh 'g++ Jenkins_lab-main/main/main.cpp -o Jenkins_lab-main/main/output'
             }
         }
 
